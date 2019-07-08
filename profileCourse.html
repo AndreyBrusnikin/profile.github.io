@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="render/web/template">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="webinar-section" th:fragment="course" id="course">
+
+    <div class="webinar-title-holder">
+        PV 6.0 | Interior + Architecture &nbsp;
+        <div class="webinar-title">| 10 июня 2019</div>
+    </div>
+    <div class="webinar-menu">
+        <a href="#">ВОЙТИ В ВЕБИНАР</a>
+        <a href="#">Бонусы</a>
+        <a href="#">Чат</a>
+        <a href="#">Файлы</a>
+        <a href="#">Альбом Работ</a>
+    </div>
+    <course-item v-for="item in items" v-model="item"></course-item>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.7/vue-router.js"></script>
+<script type="text/javascript" th:src="@{/js/components/course-component.js"></script>
+<link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" rel="stylesheet">
+<script src="js/fancybox.js"></script>
+<script src="js/vue.js"></script>
+</body>
+</html>
